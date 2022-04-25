@@ -1,10 +1,11 @@
 #include <Adafruit_NeoPixel.h>                // appel de la bibliothèque 
-#define sortie 2
-#define nb_led 6  
-#define PIN_TRIG  8
-#define PIN_ECHO  9
+#define sortie 2                                //  Défini le pin de l'arduino sur lequel est branché la bande de led
+#define nb_led 6                                //    Défini le nombre de led voulu sur la bande branché                        
+#define PIN_TRIG  8                              // Défini le pin de l'arduino sur lequel est branché la broche Trig du module HC-04
+#define PIN_ECHO  9                              // Défini le pin de l'arduino sur lequel est branché la broche Echo du module HC-04
 
-Adafruit_NeoPixel module = Adafruit_NeoPixel(nb_led, sortie, NEO_GRB + NEO_KHZ800);  // création de l'objet module
+Adafruit_NeoPixel module = Adafruit_NeoPixel(nb_led, sortie, NEO_GRB + NEO_KHZ800);  // création de l'objet module à utiliser pour controler la bande
+
 long duration_hc, distance_hc;
 
 void setup() {
